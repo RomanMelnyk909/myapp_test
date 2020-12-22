@@ -4,7 +4,8 @@ import './Footer.css';
 class Footer extends React.Component{
   render() {
     return (
-        <footer>
+        <footer className="section footer-classic conext-dark" 
+        style={{background: '#2d3246', color: '#fff'}}>
           <p>Copyright</p>
         </footer>
     )

@@ -4,11 +4,12 @@ import './Main.css'
 class Main extends React.Component{
   render(props) {
     return (
-        <main className = 'main'>
+      <div className="container">
+        <main>
         <article>
           <header>
-            <h1>{this.props.name}</h1>
-            <h2>{this.props.name1}</h2>
+            <h1>Article 1</h1>
+            <h2>Article 2</h2>
           </header>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
              Blanditiis iure esse error? Omnis esse fugit cumque eos 
@@ -22,6 +23,7 @@ class Main extends React.Component{
           </p>
         </article>
       </main>
+      </div>
     )
     
 } }
