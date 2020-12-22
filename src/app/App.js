@@ -5,11 +5,18 @@ import Header from '../header/Header';
 import Main from '../main/Main';
 import Footer from '../footer/Footer';
 
+let nav = {
+  main : '/index',
+  about : '/about',
+  price : '/buy/price',
+  hello : 'Hello'
+}
+
 class App extends React.Component{
 render() {
   return (
     <div className="App">
-      <Header />
+      <Header title='New site' hero='GOO gogo' nav={nav}/>
       <Main  />
       <Footer />
     </div>

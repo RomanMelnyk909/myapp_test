@@ -1,16 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './Header.css';
+import Nav from '../Nav';
 
 
 class Header extends React.Component{
   render() {
+    let nav = this.props.nav;
     return (
-      
+      <div className="header">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <h1>{this.props.title}</h1>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            {this.props.hero}
           </p>
           <a
             className="App-link"
@@ -21,6 +24,8 @@ class Header extends React.Component{
             Learn React
           </a>
         </header> 
+        <Nav nav={nav}/>
+        </div>
 
     )
 }
