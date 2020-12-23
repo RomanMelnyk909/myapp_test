@@ -17,8 +17,8 @@ render() {
   return (
     <div className="App">
       <Header title='New site' hero='GOO gogo' nav={nav}/>
-      <Main  />
-      <Footer />
+      {/* <Main  /> */}
+      {/* <Footer /> */}
     </div>
   );
 }
