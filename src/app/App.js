@@ -1,7 +1,11 @@
 
 import React from 'react';
 import './App.css';
-
+import {BrowserRouter as Router,  Switch, Route, Link} from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Contacts from './Contacts';
+import Other from './Other';
 
 class App extends React.Component{
   constructor(props) {
@@ -25,30 +29,21 @@ render() {
   let c = ['hello', 'ivanov', 'ivan', 'ivanovich'];
 
   return (
+    <Router>
     <div className='ty'>
-      <h1>{this.state.go}</h1>
-      <h2>{3 + 2}</h2>
-      <ul>
-        {c.map((elem, index) => {
-          return <li key={elem}>{index+1} {elem}</li>
-        })}
-        {/* {c.map(function(elem) {
-          return <li>{elem}</li>
-          
-        })} */}
-      </ul>
-      <div>{Math.random()}</div>
-      <div>{this.test()}</div>
-      <div>{a}</div>
-      <div {...b}></div>
-
-      <hr/>
-      <p>{false}</p>
-      <hr/>
-      <p>&#38;</p>
-      <input defaultValue = 'hello' />
-
+     <ul>
+       <li><a href="/">Main page</a></li>
+       <li><a href="/about">About</a></li>
+       <li><a href="/contacts">Contacts</a></li>
+     </ul>
+     <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/contacts" component={Contacts} />
+      <Route component={Other} />
+     </Switch>
     </div>
+    </Router>
   );
 }
 }
